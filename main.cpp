@@ -11,9 +11,24 @@ class Book {
     unsigned int rok_vydani;
     int mnozstvi;
 
-    // Konstruktor
+    // Konstruktorek vytvoren
     Book(std::string nazev, std::string autor, int _id, unsigned int rok, int _mnozstvi)
         : nazev_knihy(nazev), autor_knihy(autor), id(_id), rok_vydani(rok), mnozstvi(_mnozstvi) {}
+
+    void upravKnihu(std::string novyNazev, std::string novy_autor, int _newid, unsigned int novy_rok_vydani, int nove_mnozstvi){
+        nazev_knihy = novyNazev;
+        autor_knihy = novy_autor;
+        rok_vydani = novy_rok_vydani;
+        mnozstvi = nove_mnozstvi;
+
+
+    // dopln funkci pro hledani knihy pro me pls.
+    }
+     bool hledejKnihu(const std::string& searchNazev, const std::string& searchAutor)const {
+        return (nazev_knihy == searchNazev && autor_knihy == searchAutor);
+
+    }
+
 };
 
 int main() {
